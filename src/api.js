@@ -1,9 +1,7 @@
 import axios from "axios";
-import axiosInstance from "../api";
 
 // Base URL for local Django backend
 const BASE_URL = import.meta.env.VITE_REACT_APP_BACKEND_URL;
-
 
 // Create an axios instance
 const axiosInstance = axios.create({
@@ -23,5 +21,3 @@ axiosInstance.interceptors.request.use((config) => {
 });
 
 export default axiosInstance;
-
-await axiosInstance.get("/orders/");
